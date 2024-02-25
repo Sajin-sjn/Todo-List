@@ -17,18 +17,56 @@ body {
 }
 .wrapper {
     background-color: aliceblue;
-    width: 25vw;
-    padding: 20px;
-    border-radius: 1%;
+    width: 30vw;
+    padding: 30px;
+    border-radius: 10px;
+}
+h2 {
+    margin-bottom: 10px;
+}
+.layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    
 }
 input {
-    width: 70%;
-    height: 40px;
+    flex: 1;
     border: none;
-    background-color: rgb(229, 226, 226);
+    outline: none;
+    background: transparent;
+    padding-left: 20px;
 }
 button {
-    padding: 10px 38px;
-    display: inline;
-    margin-block: -10px;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(255, 101, 45);
+    cursor: pointer;
+}
+ul {
+    margin-top: 20px;
+}
+ul li{
+    list-style: none;
+    padding: 10px 40px;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    background-image: url(./image/unchecked.png);
+    position: absolute;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    left: 0px;
+    cursor: pointer;
+}
+ul li.checked::before {
+    background-image: url(./image/checked.png);
 }
