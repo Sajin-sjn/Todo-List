@@ -38,6 +38,7 @@ input {
     outline: none;
     background: transparent;
     padding-left: 20px;
+    font-size: 15px;
 }
 button {
     border: none;
@@ -55,6 +56,7 @@ ul li{
     list-style: none;
     padding: 10px 40px;
     position: relative;
+    cursor: pointer;
 }
 ul li::before {
     content: '';
@@ -66,6 +68,27 @@ ul li::before {
     background-position: center;
     left: 0px;
     cursor: pointer;
+}
+ul li.checked::before {
+    background-image: url(./image/checked.png);
+}
+ul li span {
+    font-size: 25px;
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 0;
+    width: 32px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 25px;
+}
+ul li span:hover {
+    background-color: rgb(255, 101, 45);
+}
+ul li.checked {
+    text-decoration: line-through;
 }
 ul li.checked::before {
     background-image: url(./image/checked.png);
